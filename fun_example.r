@@ -299,13 +299,18 @@
 #legend("topright", c("Spaghetti", "Pizza", "MacNCheese", "Chicken", "Tacos"), cex = 0.8, fill = colors)
 #dev.off()
 
-#bar charts:
-foodPref = c(15,35,10,25,15)
-foodLabels = c("Spaghetti", "Pizza", "MacNCheese", "Chicken", "Tacos")
-png(file = "child_food_preferences_bar.png")
-colors = rainbow(length(foodPref))
-barplot(foodPref, names.arg=foodLabels, xlab = "votes", ylab = "food options", main = "Food Prefs", col = colors)
+##bar charts:
+#foodPref = c(15,35,10,25,15)
+#foodLabels = c("Spaghetti", "Pizza", "MacNCheese", "Chicken", "Tacos")
+#png(file = "child_food_preferences_bar.png")
+#colors = rainbow(length(foodPref))
+#barplot(foodPref, names.arg=foodLabels, xlab = "votes", ylab = "food options", main = "Food Prefs", col = colors)
+#dev.off()
 
+#Regression analysis:
+plants = (iris)
+plantsData = plants[,c("Petal.Length","Petal.Width")]
+scatter.smooth(x = plantsData$Petal.Length, y = plantsData$Petal.Width)
 
 
 
