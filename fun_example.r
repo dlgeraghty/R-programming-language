@@ -127,28 +127,72 @@
 #owesMoney = customerData[customerData$debt > 0, ]
 #owesMoney
 
-#looping:
-num = 5
-repeat{
-	print(num)
-	num = num + 1
-	if(num > 5){
-		break
-	}
-}
+##looping:
+#num = 5
+#repeat{
+#	print(num)
+#	num = num + 1
+#	if(num > 5){
+#		break
+#	}
+#}
+#
+#while(num > 0){
+#	num = num-1
+#	if(num %% 2 == 0) {
+#		next
+#	}
+#	print(num)
+#}
+#
+#oneTo5 = 1:5
+#for(i in oneTo5){
+#	print(i)
+#}
 
-while(num > 0){
-	num = num-1
-	if(num %% 2 == 0) {
-		next
-	}
-	print(num)
-}
+#Matrix:
+matrix1 = matrix(data=c(1,2,3,4))
+matrix1
 
-oneTo5 = 1:5
-for(i in oneTo5){
-	print(i)
-}
+matrix2 = matrix(data = c(1,2,3,4), nrow = 2, ncol = 2)
+matrix2
+
+matrix3 = matrix(data = c(1, 2, 3, 4), nrow = 2, ncol = 2, byrow=T)
+matrix3
+
+dim(matrix3)
+matrix3[1,2]
+matrix3[1,]
+matrix3[,2]
+
+matrix4 = rbind(1:3, 4:6, 7:9)
+matrix4
+
+matrix4[1,1] = 0
+matrix4
+
+matrix4[1,] = c(10, 11, 12)
+matrix4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
