@@ -65,25 +65,36 @@
 #cat("TRUE || FALSE = ", T || F, "\n")
 #cat("!TRUE = ", !T, "\n")
 
-#Decision making statements:
-age = 18
-if(age >= 18){
-	print("Drive and Vote")
-}else if(age >= 16){
-	print("Drive")
-}else{
-	print("Wait")
-}
-grade = "C"
-switch(grade,
-       "A" = print("great"),
-       "B" = print("good"),
-       "C" = print("ok"),
-       "D" = print("Bad"),
-       "F" = print("terrible"),
-       print("No such grade"))
+##Decision making statements:
+#age = 18
+#if(age >= 18){
+#	print("Drive and Vote")
+#}else if(age >= 16){
+#	print("Drive")
+#}else{
+#	print("Wait")
+#}
+#grade = "C"
+#switch(grade,
+#       "A" = print("great"),
+#       "B" = print("good"),
+#       "C" = print("ok"),
+#       "D" = print("Bad"),
+#       "F" = print("terrible"),
+#       print("No such grade"))
 
-
+#Strings:
+str1 = "This is a string"
+nchar(str1)
+sprintf(" Dog > Egg : %s", "Dog" > "Egg")
+sprintf(" Dog == Egg : %s", "Dog" == "Egg")
+str2 = paste("Owl", "Bear", sep="")
+str2
+substr(x = str2, start = 4, stop = 7)
+sub(pattern = "Owl", replacement = "Hawk", x = str2)
+gsub(pattern = "Egg", replacement = "Chicken", x = "Egg, Egg")
+strVect = strsplit("A dog ran fast" , " ")
+strVect
 
 
 
