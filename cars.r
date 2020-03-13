@@ -13,3 +13,7 @@ h <- hist(mtcars$hp, breaks=4, col = "magenta")
 text(h$mids, h$counts, labels=h$counts, adj=c(0.5,-0.5))
 #"box-plot" of horspower:
 boxplot(mtcars$hp,notch = TRUE, col="brown")
+#strip chart of horsepower:
+stripchart(mtcars$hp, method="jitter", pch=1, col="orange")
+#relation between the 1/4 mile time and hp:
+plot(mtcars$hp, mtcars$qsec)
