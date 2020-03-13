@@ -178,56 +178,68 @@
 #array1 = array(data = 1:8, dim = c(2,2,2)) #tridimensional
 #array1
 
-#functions:
-getSum = function(num1, num2){
-	return( num1 + num2)
-}
-sprintf("5 + 6 = %d" , getSum(5, 6))
-getDifference = function(num1, num2){
-	num1-num2
-}
-sprintf("5 - 6 = %d" , getDifference(5, 6))
-makeList = function(theString){
-	return(strsplit(theString, " "))
-}
-makeList("Random Words")
-missFunc = function(x){
-	if(missing(x)){
-		return("Missing argument")
-	}else {
-		return(x)
-	}
-}
-missFunc()
-getSumMore = function(...){
-	numList = list(...)
-	sum = 0;
-	for( i in numList ){
-		sum = sum + i
-	}
-	sum
-}
-getSumMore(1, 2, 3 , 4)
-#anonymous funcion:
-numList = 1:10
-dblList = (function(x) x * 2)(numList)
-dblList
-#nclosure:
-power = function(exp){
-	function(x){
-		x ^ exp
-	}
-}
-cubed = power(3)
-cubed(2)	# 2 ^ 3
-cubed(1:5)	# 1 ^ 3 , 2 ^ 3 ... 5^3
+##functions:
+#getSum = function(num1, num2){
+#	return( num1 + num2)
+#}
+#sprintf("5 + 6 = %d" , getSum(5, 6))
+#getDifference = function(num1, num2){
+#	num1-num2
+#}
+#sprintf("5 - 6 = %d" , getDifference(5, 6))
+#makeList = function(theString){
+#	return(strsplit(theString, " "))
+#}
+#makeList("Random Words")
+#missFunc = function(x){
+#	if(missing(x)){
+#		return("Missing argument")
+#	}else {
+#		return(x)
+#	}
+#}
+#missFunc()
+#getSumMore = function(...){
+#	numList = list(...)
+#	sum = 0;
+#	for( i in numList ){
+#		sum = sum + i
+#	}
+#	sum
+#}
+#getSumMore(1, 2, 3 , 4)
+##anonymous funcion:
+#numList = 1:10
+#dblList = (function(x) x * 2)(numList)
+#dblList
+##nclosure:
+#power = function(exp){
+#	function(x){
+#		x ^ exp
+#	}
+#}
+#cubed = power(3)
+#cubed(2)	# 2 ^ 3
+#cubed(1:5)	# 1 ^ 3 , 2 ^ 3 ... 5^3
+#
+#addFunc = list(
+#	       add2 = function(x) x + 2,
+#	       add3 = function(x) x + 3
+#	       )
+#addFunc$add2(5)
 
-addFunc = list(
-	       add2 = function(x) x + 2,
-	       add3 = function(x) x + 3
-	       )
-addFunc$add2(5)
-
+#Exception handling:
+divide = function(num1, num2){
+	tryCatch(
+		 num1/num2,
+		 error = function(e){
+			 if(is.character(num1) || is.character(num2)){
+				 print("Cant divide with strings")
+			 }
+		 }
+	)
+}
+divide(10, "5")
 
 
 
