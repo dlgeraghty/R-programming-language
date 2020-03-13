@@ -150,30 +150,32 @@
 #	print(i)
 #}
 
-#Matrix:
-matrix1 = matrix(data=c(1,2,3,4))
-matrix1
+##Matrix:
+#matrix1 = matrix(data=c(1,2,3,4))
+#matrix1
+#
+#matrix2 = matrix(data = c(1,2,3,4), nrow = 2, ncol = 2)
+#matrix2
+#
+#matrix3 = matrix(data = c(1, 2, 3, 4), nrow = 2, ncol = 2, byrow=T)
+#matrix3
+#
+#dim(matrix3)
+#matrix3[1,2]
+#matrix3[1,]
+#matrix3[,2]
+#
+#matrix4 = rbind(1:3, 4:6, 7:9)
+#matrix4
+#
+#matrix4[1,1] = 0
+#matrix4
+#
+#matrix4[1,] = c(10, 11, 12)
+#matrix4
 
-matrix2 = matrix(data = c(1,2,3,4), nrow = 2, ncol = 2)
-matrix2
-
-matrix3 = matrix(data = c(1, 2, 3, 4), nrow = 2, ncol = 2, byrow=T)
-matrix3
-
-dim(matrix3)
-matrix3[1,2]
-matrix3[1,]
-matrix3[,2]
-
-matrix4 = rbind(1:3, 4:6, 7:9)
-matrix4
-
-matrix4[1,1] = 0
-matrix4
-
-matrix4[1,] = c(10, 11, 12)
-matrix4
-
+array1 = array(data = 1:8, dim = c(2,2,2))
+array1
 
 
 
