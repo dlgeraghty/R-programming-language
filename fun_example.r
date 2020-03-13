@@ -228,22 +228,25 @@
 #	       )
 #addFunc$add2(5)
 
-#Exception handling:
-divide = function(num1, num2){
-	tryCatch(
-		 num1/num2,
-		 error = function(e){
-			 if(is.character(num1) || is.character(num2)){
-				 print("Cant divide with strings")
-			 }
-		 }
-	)
-}
-divide(10, "5")
+##Exception handling:
+#divide = function(num1, num2){
+#	tryCatch(
+#		 num1/num2,
+#		 error = function(e){
+#			 if(is.character(num1) || is.character(num2)){
+#				 print("Cant divide with strings")
+#			 }
+#		 }
+#	)
+#}
+#divide(10, "5")
 
-
-
-
+#file i/o
+myPeople = read.table(file="people.txt",
+			header=T, sep=" ",
+			na.strings=" ",
+			stringsAsFactors=F)
+myPeople
 
 
 
