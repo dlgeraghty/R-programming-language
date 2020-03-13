@@ -11,3 +11,5 @@ barplot(count, main = "transmission", names.arg=c("automatic", "manual"), col = 
 #histogram of horsepowerr:
 h <- hist(mtcars$hp, breaks=4, col = "magenta")
 text(h$mids, h$counts, labels=h$counts, adj=c(0.5,-0.5))
+#"box-plot" of horspower:
+boxplot(mtcars$hp,notch = TRUE, col="brown")
