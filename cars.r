@@ -8,3 +8,6 @@ rm(op)
 #display the cars that have automatic and manual transmission
 count = table(mtcars$am)
 barplot(count, main = "transmission", names.arg=c("automatic", "manual"), col = "red")
+#histogram of horsepowerr:
+h <- hist(mtcars$hp, breaks=4, col = "magenta")
+text(h$mids, h$counts, labels=h$counts, adj=c(0.5,-0.5))
