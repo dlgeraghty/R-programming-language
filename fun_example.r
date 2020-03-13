@@ -45,21 +45,25 @@
 #rep(x = 2, times = 5, each = 2)
 #rep(x = c(1, 2, 3), times = 2, each = 2)
 
-#Relational operators:
-sprintf("4 == 5 : %s", 4 == 5)
-sprintf("4 != 5 : %s" ,4 != 5)
-sprintf("4 > 5 : %s" ,4 > 5)
-sprintf("4 < 5 : %s" ,4 < 5)
-sprintf("4 >= 5 : %s" ,4 >= 5)
-sprintf("4 <= 5 : %s" ,4 <= 5)
+##Relational operators:
+#sprintf("4 == 5 : %s", 4 == 5)
+#sprintf("4 != 5 : %s" ,4 != 5)
+#sprintf("4 > 5 : %s" ,4 > 5)
+#sprintf("4 < 5 : %s" ,4 < 5)
+#sprintf("4 >= 5 : %s" ,4 >= 5)
+#sprintf("4 <= 5 : %s" ,4 <= 5)
 
-oneTo20= c(1:20)
-isEven = oneTo20 %% 2 == 0
-isEven
+#oneTo20= c(1:20)
+#isEven = oneTo20 %% 2 == 0
+#isEven
 
-justEvens = oneTo20[oneTo20 %% 2 == 0]
-justEvens
+#justEvens = oneTo20[oneTo20 %% 2 == 0]
+#justEvens
 
+#Logic operators:
+cat("TRUE && FALSE = ", T && F, "\n")
+cat("TRUE || FALSE = ", T || F, "\n")
+cat("!TRUE = ", !T, "\n")
 
 
 
