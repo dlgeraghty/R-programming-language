@@ -107,29 +107,48 @@
 #wdFact = factor(x = wDays, levels = dow, ordered = T)
 #wdFact
 
-#Data frames (finally xD)
-customerData = data.frame(name = c("Tom", "Sally", "Sue"),
-			  age = c(43, 28, 35),
-			  stringAsFactors=F)
-customerData
-customerData[1,1]
-customerData[1, 1:2]
-customerData[1:3, 2]
-dim(customerData)
-recordMark = data.frame(name= "Mark", age = 33, stringAsFactors=F)
-customerData = rbind(customerData, recordMark)
-customerData
+##Data frames (finally xD)
+#customerData = data.frame(name = c("Tom", "Sally", "Sue"),
+#			  age = c(43, 28, 35),
+#			  stringAsFactors=F)
+#customerData
+#customerData[1,1]
+#customerData[1, 1:2]
+#customerData[1:3, 2]
+#dim(customerData)
+#recordMark = data.frame(name= "Mark", age = 33, stringAsFactors=F)
+#customerData = rbind(customerData, recordMark)
+#customerData
+#
+#debt = c(0, 25.50, 36, 48.19)
+#customerData = cbind(customerData, debt)
+#customerData
+#
+#owesMoney = customerData[customerData$debt > 0, ]
+#owesMoney
 
-debt = c(0, 25.50, 36, 48.19)
-customerData = cbind(customerData, debt)
-customerData
+#looping:
+num = 5
+repeat{
+	print(num)
+	num = num + 1
+	if(num > 5){
+		break
+	}
+}
 
-owesMoney = customerData[customerData$debt > 0, ]
-owesMoney
+while(num > 0){
+	num = num-1
+	if(num %% 2 == 0) {
+		next
+	}
+	print(num)
+}
 
-
-
-
+oneTo5 = 1:5
+for(i in oneTo5){
+	print(i)
+}
 
 
 
