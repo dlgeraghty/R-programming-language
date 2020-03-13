@@ -83,18 +83,29 @@
 #       "F" = print("terrible"),
 #       print("No such grade"))
 
-#Strings:
-str1 = "This is a string"
-nchar(str1)
-sprintf(" Dog > Egg : %s", "Dog" > "Egg")
-sprintf(" Dog == Egg : %s", "Dog" == "Egg")
-str2 = paste("Owl", "Bear", sep="")
-str2
-substr(x = str2, start = 4, stop = 7)
-sub(pattern = "Owl", replacement = "Hawk", x = str2)
-gsub(pattern = "Egg", replacement = "Chicken", x = "Egg, Egg")
-strVect = strsplit("A dog ran fast" , " ")
-strVect
+##Strings:
+#str1 = "This is a string"
+#nchar(str1)
+#sprintf(" Dog > Egg : %s", "Dog" > "Egg")
+#sprintf(" Dog == Egg : %s", "Dog" == "Egg")
+#str2 = paste("Owl", "Bear", sep="")
+#str2
+#substr(x = str2, start = 4, stop = 7)
+#sub(pattern = "Owl", replacement = "Hawk", x = str2)
+#gsub(pattern = "Egg", replacement = "Chicken", x = "Egg, Egg")
+#strVect = strsplit("A dog ran fast" , " ")
+#strVect
+
+#Factors:
+direction = c("Up", "Left", "Right", "Down", "Left", "Up")
+factorDir = factor(direction)
+is.factor(factorDir)
+factorDir
+levels(x=factorDir)
+dow = c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+wDays = c("Tuesday", "Thursday", "Monday")
+wdFact = factor(x = wDays, levels = dow, ordered = T)
+wdFact
 
 
 
