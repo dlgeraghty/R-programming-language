@@ -290,15 +290,21 @@
 #sample(0:1, 10, replace=T)
 #sample(0:20, 10, replace=T)
 
-#Pie charts:
+##Pie charts:
+#foodPref = c(15,35,10,25,15)
+#foodLabels = c("Spaghetti", "Pizza", "MacNCheese", "Chicken", "Tacos")
+#png(file = "child_food_preferences.png")
+#colors = rainbow(length(foodPref))
+#pie(foodPref, foodLabels, main = "Food Prefs", col = colors)
+#legend("topright", c("Spaghetti", "Pizza", "MacNCheese", "Chicken", "Tacos"), cex = 0.8, fill = colors)
+#dev.off()
+
+#bar charts:
 foodPref = c(15,35,10,25,15)
 foodLabels = c("Spaghetti", "Pizza", "MacNCheese", "Chicken", "Tacos")
-png(file = "child_food_preferences.png")
+png(file = "child_food_preferences_bar.png")
 colors = rainbow(length(foodPref))
-pie(foodPref, foodLabels, main = "Food Prefs", col = colors)
-legend("topright", c("Spaghetti", "Pizza", "MacNCheese", "Chicken", "Tacos"), cex = 0.8, fill = colors)
-dev.off()
-
+barplot(foodPref, names.arg=foodLabels, xlab = "votes", ylab = "food options", main = "Food Prefs", col = colors)
 
 
 
