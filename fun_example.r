@@ -269,27 +269,35 @@
 #eruptions4 = with(faithful, faithful[eruptions > 4, ])
 #points(eruptions4, col = "red", pch = 3)
 
-#math:
-sqrt(x=100)
-log(x = 4, base = 2)
-exp(x = 2)
-sum(c(1,2,3))
-randD1 = c(1,5,6,7,10,16)
-mean(randD1)
-median(randD1)
-min(randD1)
-max(randD1)
-range(randD1)
-ceiling(4.5)
-floor(4.5)
-cumsum(c(1,2,3))
-cumprod(c(1,2,3))
-cummax(c(7:9, 4:6, 1:3))
-cummin(c(7:9, 4:6, 1:3))
-#random:
-sample(0:1, 10, replace=T)
-sample(0:20, 10, replace=T)
+##math:
+#sqrt(x=100)
+#log(x = 4, base = 2)
+#exp(x = 2)
+#sum(c(1,2,3))
+#randD1 = c(1,5,6,7,10,16)
+#mean(randD1)
+#median(randD1)
+#min(randD1)
+#max(randD1)
+#range(randD1)
+#ceiling(4.5)
+#floor(4.5)
+#cumsum(c(1,2,3))
+#cumprod(c(1,2,3))
+#cummax(c(7:9, 4:6, 1:3))
+#cummin(c(7:9, 4:6, 1:3))
+##random:
+#sample(0:1, 10, replace=T)
+#sample(0:20, 10, replace=T)
 
+#Pie charts:
+foodPref = c(15,35,10,25,15)
+foodLabels = c("Spaghetti", "Pizza", "MacNCheese", "Chicken", "Tacos")
+png(file = "child_food_preferences.png")
+colors = rainbow(length(foodPref))
+pie(foodPref, foodLabels, main = "Food Prefs", col = colors)
+legend("topright", c("Spaghetti", "Pizza", "MacNCheese", "Chicken", "Tacos"), cex = 0.8, fill = colors)
+dev.off()
 
 
 
