@@ -96,18 +96,36 @@
 #strVect = strsplit("A dog ran fast" , " ")
 #strVect
 
-#Factors:
-direction = c("Up", "Left", "Right", "Down", "Left", "Up")
-factorDir = factor(direction)
-is.factor(factorDir)
-factorDir
-levels(x=factorDir)
-dow = c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
-wDays = c("Tuesday", "Thursday", "Monday")
-wdFact = factor(x = wDays, levels = dow, ordered = T)
-wdFact
+##Factors:
+#direction = c("Up", "Left", "Right", "Down", "Left", "Up")
+#factorDir = factor(direction)
+#is.factor(factorDir)
+#factorDir
+#levels(x=factorDir)
+#dow = c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+#wDays = c("Tuesday", "Thursday", "Monday")
+#wdFact = factor(x = wDays, levels = dow, ordered = T)
+#wdFact
 
+#Data frames (finally xD)
+customerData = data.frame(name = c("Tom", "Sally", "Sue"),
+			  age = c(43, 28, 35),
+			  stringAsFactors=F)
+customerData
+customerData[1,1]
+customerData[1, 1:2]
+customerData[1:3, 2]
+dim(customerData)
+recordMark = data.frame(name= "Mark", age = 33, stringAsFactors=F)
+customerData = rbind(customerData, recordMark)
+customerData
 
+debt = c(0, 25.50, 36, 48.19)
+customerData = cbind(customerData, debt)
+customerData
+
+owesMoney = customerData[customerData$debt > 0, ]
+owesMoney
 
 
 
